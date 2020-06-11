@@ -4,7 +4,7 @@ auto-source ROS setup.bash
 
 ## Prerequisites
 
-This plugin if for [ROS](https://www.ros.org/), so it has no effect if you don't use ROS.
+This plugin is for [ROS](https://www.ros.org/), so it has no effect if you don't use ROS.
 
 ## Installation
 
