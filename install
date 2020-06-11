@@ -1,0 +1,15 @@
+#!/usr/bin/env fish
+
+set script_dir (realpath (dirname (status --current-filename)))
+
+set -q XDG_CONFIG_HOME || set -l XDG_CONFIG_HOME $HOME/.config
+set -l fish_dir $XDG_CONFIG_HOME/fish
+
+for dir_name in "conf.d" "functions" "completions"
+    test -d $dir_name || continue
+
+    for f in (fd .fish $script_dir/$dir_name/)
+        mkdir -p $fish_dir/$dir_name/
+        ln -snfv $f $fish_dir/$dir_name/
+    end
+end
