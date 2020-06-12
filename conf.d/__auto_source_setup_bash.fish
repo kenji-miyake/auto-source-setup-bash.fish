@@ -3,6 +3,6 @@ function fish_greeting
 end
 
 function cd
-    builtin cd $argv
+    __cd $argv
     __auto_source_setup_bash
 end
