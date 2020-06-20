@@ -2,14 +2,9 @@ function __auto_source_setup_bash
     set -q DISABLE_AUTO_SOURCE && return
     set -q AUTO_SOURCE_EXECUTED && return
 
-    set -l directories "devel" "install"
+    set -l setup_bash (__auto_source_find_setup_bash) || return
 
-    for directory in $directories
-        if test -e $directory/setup.bash
-            echo "source $directory/setup.bash"
-            bass source $directory/setup.bash
-            set -g AUTO_SOURCE_EXECUTED
-            return
-        end
-    end
+    echo "source $setup_bash"
+    bass source $setup_bash
+    set -g AUTO_SOURCE_EXECUTED
 end
