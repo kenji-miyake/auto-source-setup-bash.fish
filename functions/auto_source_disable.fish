@@ -1,3 +1,3 @@
 function auto_source_disable
-    set -U DISABLE_AUTO_SOURCE
+    set -U AUTO_SOURCE_DISABLED
 end
