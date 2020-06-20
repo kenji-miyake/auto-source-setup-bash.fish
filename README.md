@@ -47,6 +47,20 @@ auto_source_enable
 set -e DISABLE_AUTO_SOURCE
 ```
 
+By default, This plugin load the previous-loaded setup.bash when you are at home directory.
+
+To disable this feature,
+
+```sh
+set -U AUTO_SOURCE_USE_PREV_SETUP_BASH false
+```
+
+To re-enable,
+
+```sh
+set -U AUTO_SOURCE_USE_PREV_SETUP_BASH true
+```
+
 ## Example
 
 ### Open new terminal in catkin workspace
