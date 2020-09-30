@@ -36,6 +36,7 @@ If you'd like to disable auto-source, call `auto_source_disable` or set `DISABLE
 ```sh
 auto_source_disable
 
+# or
 set -U DISABLE_AUTO_SOURCE
 ```
 
@@ -44,6 +45,7 @@ To re-enable,
 ```sh
 auto_source_enable
 
+# or
 set -e DISABLE_AUTO_SOURCE
 ```
 
@@ -59,6 +61,15 @@ To re-enable,
 
 ```sh
 set -U AUTO_SOURCE_USE_PREV_SETUP_BASH true
+```
+
+To just clear cache,
+
+```sh
+auto_source_clear_cache
+
+# or
+set -e AUTO_SOURCE_PREV_SETUP_BASH
 ```
 
 ## Example
