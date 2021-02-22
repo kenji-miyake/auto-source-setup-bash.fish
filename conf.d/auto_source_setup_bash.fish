@@ -5,6 +5,7 @@ function fish_greeting
 end
 
 function cd
-    __cd $argv
+    __cd $argv || return 1
     __auto_source_setup_bash
+    return 0
 end
