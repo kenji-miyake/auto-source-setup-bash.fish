@@ -9,7 +9,9 @@ function as
 
     set -U AUTO_SOURCE_PREV_SETUP_BASH $setup_bash
 
-    echo "source $setup_bash"
+    eval $AUTO_SOURCE_BEFORE_SOURCE_COMMAND
     bass source $setup_bash
+    eval $AUTO_SOURCE_AFTER_SOURCE_COMMAND
+
     set -g AUTO_SOURCE_EXECUTED
 end

@@ -77,7 +77,7 @@ set -e AUTO_SOURCE_PREV_SETUP_BASH
 ### Open new terminal in catkin workspace
 
 ```sh
-source devel/setup.bash
+source /path/to/setup.bash
 ~/path_to_your_catkin_workspace
 ❯
 ```
@@ -87,5 +87,32 @@ source devel/setup.bash
 ```sh
 ~
 ❯ cd path_to_your_colcon_workspace
-source install/setup.bash
+source /path/to/setup.bash
+```
+
+## Tips
+
+### Customize on-source command
+
+If you'd like to customize the command executed before/after `source setupb.bash`, please set `AUTO_SOURCE_BEFORE_SOURCE_COMMAND` and `AUTO_SOURCE_AFTER_SOURCE_COMMAND`.
+
+Default:
+
+- `AUTO_SOURCE_BEFORE_SOURCE_COMMAND` = `'echo "source $setup_bash" && set -g AUTO_SOURCE_PREV_ROS_DISTRO $ROS_DISTRO'`
+- `AUTO_SOURCE_AFTER_SOURCE_COMMAND` = `''`
+
+```sh
+source /path/to/setup.bash
+~
+❯ echo $AUTO_SOURCE_PREV_ROS_DISTRO
+foxy
+```
+
+After `set -U AUTO_SOURCE_AFTER_SOURCE_COMMAND 'echo $ROS_DISTRO > ~/.auto-source'`:
+
+```sh
+source /path/to/setup.bash
+~
+❯ cat ~/.auto-source
+foxy
 ```
