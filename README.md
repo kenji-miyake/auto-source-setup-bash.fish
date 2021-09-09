@@ -1,10 +1,12 @@
 # auto-source-setup-bash.fish
 
-auto-source ROS setup.bash
+auto-source [ROS](https://www.ros.org/) setup.bash
+
+This plugin is for [ROS](https://www.ros.org/), so it has no effect if you don't use ROS.
 
 ## Prerequisites
 
-This plugin is for [ROS](https://www.ros.org/), so it has no effect if you don't use ROS.
+ - [Bass plugin](https://github.com/edc/bass) (for sourcing the setup.bash file)
 
 ## Installation
 
