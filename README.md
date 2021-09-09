@@ -96,7 +96,7 @@ source /path/to/setup.bash
 
 ### Customize on-source command
 
-If you'd like to customize the command executed before/after `source setupb.bash`, please set `AUTO_SOURCE_BEFORE_SOURCE_COMMAND` and `AUTO_SOURCE_AFTER_SOURCE_COMMAND`.
+If you'd like to customize the command executed before/after `source setup.bash`, please set `AUTO_SOURCE_BEFORE_SOURCE_COMMAND` and `AUTO_SOURCE_AFTER_SOURCE_COMMAND`.
 
 Default:
 
