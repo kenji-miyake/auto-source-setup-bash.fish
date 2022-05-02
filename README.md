@@ -13,7 +13,7 @@ This plugin is for [ROS](https://www.ros.org/), so it has no effect if you don't
 ### Using fisher (recommended)
 
 ```sh
-fisher add kenji-miyake/auto-source-setup-bash.fish
+fisher install kenji-miyake/auto-source-setup-bash.fish
 ```
 
 ### Using local-install script (for development)
